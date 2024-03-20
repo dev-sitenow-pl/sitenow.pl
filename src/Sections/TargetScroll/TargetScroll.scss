@@ -1,0 +1,9 @@
+@import '../../variables';
+
+.target_scroll {
+  position: absolute;
+  top: calc(-120px + 3rem);
+  pointer-events: none;
+
+  @media #{$md} {}
+}

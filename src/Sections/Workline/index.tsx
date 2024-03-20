@@ -3,6 +3,7 @@ import { WorklineBox } from './WorklineBox'
 import { Section } from '../Section'
 import { SectionTitle } from '../SectionTitle'
 
+
 const WorklineElements = [
   {
     id: '1',

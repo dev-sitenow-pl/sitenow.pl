@@ -1,3 +1,5 @@
+import './WorklineSVG.scss'
+
 type Props = {
   id: string;
 }

@@ -1,0 +1,41 @@
+@import '../../../../variables';
+
+.feedback {
+  &__slider-box {
+    .slider-item {
+
+
+      &__content {
+        padding: 1em;
+        text-align: center;
+      }
+
+      &__box {
+
+        &__icon {
+          color: $yellow;
+
+          .material-symbols-outlined {
+            font-size: 3em;
+          }
+        }
+
+        &__text {
+          text-align: center;
+          font-size: .8em;
+        }
+
+        &__author {
+          margin: .75em 0;
+          font-weight: 500;
+
+          &__brand {
+            color: $yellow;
+            font-size: .8em;
+            margin-top: .5em;
+          }
+        }
+      }
+    }
+  }
+}

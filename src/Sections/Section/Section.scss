@@ -1,0 +1,36 @@
+@import '../../variables';
+
+.sec {
+  padding: 3em 0;
+
+  &__4 {
+    img {
+      max-width: 245px;
+      margin: 0 auto 3rem;
+    }
+
+    p {
+      line-height: 2;
+    }
+  }
+
+  &__5 {
+    .tns-outer {
+      button[data-action] {
+        display: none;
+      }
+    }
+  }
+
+  &__6 {
+    h2 {
+      span {
+        display: block;
+
+        @media #{$sm} {
+          display: inline;
+        }
+      }
+    }
+  }
+}

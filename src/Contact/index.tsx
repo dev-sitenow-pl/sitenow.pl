@@ -1,6 +1,8 @@
 import { TargetScroll } from '../Sections/TargetScroll'
 import { SectionTitle } from '../Sections/SectionTitle'
 
+import './Contact.scss'
+
 const Contact = () => {
   return <footer>
     <TargetScroll targetId='contact' />

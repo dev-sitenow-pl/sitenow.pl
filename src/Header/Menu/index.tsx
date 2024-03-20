@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+
 import { LiMenu } from '../ListMenu'
 import { MenuBtnMobile } from '../MenuBtnMobile'
 import { Logo } from '../../Logo'
@@ -43,18 +45,44 @@ const MenuItems = [
 ]
 
 const Menu = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('open-menu');
+    } else {
+      document.body.classList.remove('open-menu');
+    }
+
+    return () => {
+      document.body.classList.remove('open-menu');
+    };
+  }, [isOpen]);
+
+  const handleMenuToggle = () => {
+    setIsOpen(prevState => !prevState);
+  };
+
+  const smoothScrollForTop = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    let target = document.querySelector('#start');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   return <>
     <nav className="menu">
       <div className="brand__svg-logo">
-        <a href="#start">
+        <a href="#start" onClick={smoothScrollForTop}>
           <Logo />
         </a>
       </div>
-      <MenuBtnMobile />
-      <div className="menu-box-list">
+      <MenuBtnMobile handleMenuToggle={handleMenuToggle} />
+      <div className='menu-box-list'>
         <ul className="ul">
           {MenuItems.map(menuItem => (
-            <LiMenu element={menuItem} />
+            <LiMenu element={menuItem} handleMenuToggle={handleMenuToggle} />
           ))}
         </ul>
       </div>

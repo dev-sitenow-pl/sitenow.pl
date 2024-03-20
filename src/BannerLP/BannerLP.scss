@@ -1,0 +1,53 @@
+@import '../variables';
+
+.banner {
+  position: relative;
+
+  @media #{$b-lg} {
+    padding-top: 0;
+  }
+
+  &__body {
+    .banner-box-txt {
+      text-align: center
+    }
+
+    &__monitor {
+      position: relative;
+
+      @media #{$lg} {
+        height: 900px;
+      }
+
+      .banner-box-txt {
+
+        @media #{$sm} {
+          width: 100%;
+          position: absolute;
+          z-index: 1;
+          top: 40%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      img {
+        position: relative;
+        z-index: 2;
+        display: none;
+        pointer-events: none;
+        max-width: 100%;
+        margin: 0 auto;
+
+        @media #{$sm} {
+          display: block;
+        }
+
+        @media #{$lg} {
+          max-width: none;
+          max-height: 100%;
+        }
+      }
+    }
+  }
+}

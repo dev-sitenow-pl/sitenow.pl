@@ -1,3 +1,4 @@
+import './TargetScroll.scss'
 type Props = {
   targetId: string;
 }

@@ -1,0 +1,79 @@
+@import '../core-flex';
+
+.phones-anim {
+  @extend .box-flex;
+  @extend .row;
+  margin: 1rem 0 3rem;
+
+  @media #{$sm} {
+    margin: 0;
+  }
+
+  .phone-box {
+    width: calc(100% / 3);
+    height: 100%;
+    max-height: 375px;
+    position: relative;
+    z-index: 2;
+
+    @media #{$sm} {
+      width: 97px;
+      height: 184px;
+    }
+
+    @media #{$md} {
+      width: 127px;
+      height: 243px;
+    }
+
+    @media #{$lg} {
+      width: 152px;
+      height: 290px;
+    }
+
+    @media #{$xl} {
+      width: 171px;
+      height: 325px;
+    }
+
+    .phone-body {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+
+    .phone-box-visibility-area {
+      overflow: hidden;
+      position: absolute;
+      top: 15px;
+
+      left: 50%;
+      width: calc(100% - 8px);
+      height: calc(100% - 30px);
+      transform: translateX(-50%);
+
+      @media #{$sm} {
+        top: 8px;
+        height: calc(100% - 16px);
+      }
+
+      @media #{$md} {
+        top: 15px;
+        height: calc(100% - 30px);
+      }
+
+      .inside-phone {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 100%;
+        z-index: 1;
+      }
+    }
+
+    &:nth-child(1),
+    &:nth-child(3) {
+      z-index: 1;
+    }
+  }
+}

@@ -6,6 +6,11 @@ import { Sections } from './Sections'
 import { LicenseAnnotation } from './LicenseAnnotation'
 import { Contact } from './Contact'
 
+
+import './main.scss'
+import './core-flex.scss'
+
+
 ReactDOM.createRoot(document.getElementById('start')!).render(
   <React.StrictMode>
     <Header />

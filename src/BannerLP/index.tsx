@@ -1,3 +1,5 @@
+import './BannerLP.scss'
+
 const BannerLP = () => {
   return <section className="banner">
     <div className="banner__body">

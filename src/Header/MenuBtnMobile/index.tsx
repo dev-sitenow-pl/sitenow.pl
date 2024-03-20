@@ -1,6 +1,10 @@
-const MenuBtnMobile = () => {
+type Props = {
+  handleMenuToggle: () => void;
+};
+
+const MenuBtnMobile = ({ handleMenuToggle }: Props) => {
   return <>
-    <div id="btn-hamburger">
+    <div id="btn-hamburger" onClick={handleMenuToggle}>
       <span className="material-symbols-outlined">
         menu
       </span>

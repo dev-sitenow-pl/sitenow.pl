@@ -4,6 +4,7 @@ import { About } from './About'
 import { Opinions } from './Opinions'
 import { FAQ } from './FAQ'
 
+
 const Sections = () => {
   return <>
     <Offer />

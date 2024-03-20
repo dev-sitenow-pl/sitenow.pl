@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Section.scss'
+
 type Props = {
   children: React.ReactNode;
   sectionClass?: string

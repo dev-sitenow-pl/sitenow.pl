@@ -1,0 +1,41 @@
+@import '../../../variables';
+
+.workline {
+  &__stage {
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 50px;
+
+    @media #{$sm} {
+      width: 100px;
+      height: 100px;
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      font-size: 1.5em;
+      color: $white;
+
+      @media #{$sm} {
+        font-size: 3em;
+      }
+    }
+  }
+
+  &__stage-svg {
+    fill: $yellow;
+    width: 50px;
+    height: 50px;
+
+    @media #{$sm} {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

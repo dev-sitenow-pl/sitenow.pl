@@ -1,5 +1,7 @@
 import { WorklineSVG } from '../WorklineSVG'
 
+import './WorklineBox.scss'
+
 type Props = {
   worklineElement: {
     id: string;

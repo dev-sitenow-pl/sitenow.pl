@@ -1,0 +1,137 @@
+@import '../../core-flex';
+
+@keyframes content {
+  from {
+    opacity: 0;
+    transform: translateY(5%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.faq {
+  &__main-box {
+    .flex-row {
+      max-width: 800px;
+    }
+  }
+
+  &__box-guest {
+    +.faq__box-guest {
+      margin-top: 1em;
+    }
+  }
+
+  &__box-text {
+    @extend .box-flex;
+    padding: .5em 1em;
+    width: 100%;
+    font-weight: 500;
+
+    @media #{$md} {
+
+      max-width: 80%;
+    }
+  }
+
+  &__box-text,
+  &__box-icon {
+
+    transition: background .4s;
+
+    @media #{$md} {
+      min-height: 65px;
+    }
+  }
+
+  &__box-icon {
+    @extend .box-flex;
+    @extend .jc-center;
+    @extend .ai-center;
+
+
+
+    @media #{$b-md} {
+      display: none;
+    }
+
+    @media #{$md} {
+      width: 100%;
+      max-width: 20%;
+    }
+
+    .material-symbols-outlined {
+      font-size: 3em;
+      transition: transform .4s;
+    }
+  }
+
+  &__box-btn {
+    cursor: pointer;
+
+    .faq__box-text {
+      @media #{$md} {
+        justify-content: flex-end;
+        text-align: right;
+      }
+    }
+
+    .faq__box-icon {
+
+      .material-symbols-outlined {
+        transform: translateX(-100%);
+      }
+    }
+
+    &.open-answer {
+
+      .faq__box-text {
+        background: rgba($white, .8);
+        color: $violet;
+      }
+
+      .faq__box-icon {
+        background: rgba($yellow, .8);
+
+        .material-symbols-outlined {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+
+  &__box-answer {
+    display: none;
+    transition: background .4s;
+
+    &.open-answer {
+      display: block;
+
+      animation: {
+        name: content;
+        direction: normal;
+        duration: 0.3s;
+        timing-function: ease-in-out;
+        iteration-count: 1;
+      }
+
+      .faq__box-icon {
+        background: rgba($yellow, .8);
+      }
+
+      .faq__box-text {
+        background: rgba($white, .8);
+        color: $violet;
+
+        @media #{$b-md} {
+          border-top: 2px solid $yellow;
+          justify-content: flex-start;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
