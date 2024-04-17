@@ -2,40 +2,7 @@ import { WorklineBox } from './WorklineBox'
 
 import { Section } from '../Section'
 import { SectionTitle } from '../SectionTitle'
-
-
-const WorklineElements = [
-  {
-    id: '1',
-    h3: 'Kontaktujesz się',
-    paragraf: 'ze mną mailowo lub telefonicznie <br>i mówisz o swoim pomyśle lub projekcie.<br/> Wstępnie analizuję informacje, które od Ciebie otrzymałem.'
-  },
-  {
-    id: '2',
-    h3: 'Umawiamy się',
-    paragraf: 'na spotkanie: na żywo, telefonicznie lub w formie videoorozmowy. Rozmawiamy o projekcie pod kątem technicznym, ustalamy, jakich materiałów będę od Ciebie potrzebował. Na koniec umawiamy się na harmonogram prac.'
-  },
-  {
-    id: '3',
-    h3: 'Przekazujesz mi',
-    paragraf: 'projekt strony i wszystkie niezbędne materiały takie jak: teksty, wytyczne przebiegu animacji. Przystępuję do prac front-endowych: koduję, tworzę bannery i animacje – zgodnie z Twoim projektem.'
-  },
-  {
-    id: '4',
-    h3: 'Testuję efekt',
-    paragraf: 'swojej pracy i przekazuję Ci adres testowy. Sprawdzasz działanie interaktywnych materiałów i zgłaszasz poprawki.'
-  },
-  {
-    id: '5',
-    h3: 'Wprowadzam poprawki',
-    paragraf: 'zgodnie z Twoimi uwagami. Jeśli wszystko jest w porządku, akceptujesz projekt.'
-  },
-  {
-    id: '6',
-    h3: 'Przesyłam Ci',
-    paragraf: 'wszystkie pliki w formacie ZIP lub publikuję je w wyznaczonym miejscu. Możesz od razu zacząć korzystać z materiałów na swojej stronie lub landing page.'
-  }
-]
+import WorklineElements from '../../data/Workline.json';
 
 const Workline = () => {
   return <>

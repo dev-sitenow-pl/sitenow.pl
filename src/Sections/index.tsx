@@ -1,18 +1,9 @@
-import { Offer } from './Offer'
-import { Workline } from './Workline'
-import { About } from './About'
-import { Opinions } from './Opinions'
-import { FAQ } from './FAQ'
+type Props = {
+  children: React.ReactNode;
+}
 
-
-const Sections = () => {
-  return <>
-    <Offer />
-    <Workline />
-    <About />
-    <Opinions />
-    <FAQ />
-  </>
+const Sections = (props: Props) => {
+  return <>{props.children}</>
 }
 
 export { Sections };

@@ -4,63 +4,39 @@ import { LiMenu } from '../ListMenu'
 import { MenuBtnMobile } from '../MenuBtnMobile'
 import { Logo } from '../../Logo'
 
-const MenuItems = [
-  {
-    scrollTarget: '#offer',
-    iconName: 'storefront',
-    liItemName: 'Oferta'
-  },
-  {
-    scrollTarget: '#about_me',
-    iconName: 'accessibility_new',
-    liItemName: 'Poznaj mnie'
-  },
-  {
-    scrollTarget: '#opinions',
-    iconName: 'reviews',
-    liItemName: 'Opinie'
-  },
-  {
-    scrollTarget: '#faq',
-    iconName: 'quiz',
-    liItemName: 'FAQ'
-  },
-  {
-    scrollTarget: 'tel:+48535606164',
-    iconName: 'smartphone',
-    liItemName: 'Telefon',
-    liClassName: 'mobile-btn'
-  },
-  {
-    scrollTarget: 'mailto:biuro@sitenow.pl',
-    iconName: 'mail',
-    liItemName: 'Napisz do mnie',
-    liClassName: 'mobile-btn'
-  },
-  {
-    scrollTarget: '#contact',
-    iconName: 'support_agent',
-    liItemName: 'Kontakt'
-  }
-]
+import MenuItems from '../../data/Menu.json';
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.classList.add('open-menu');
-    } else {
-      document.body.classList.remove('open-menu');
-    }
+    const handleResize = () => {
+      if (window.innerWidth < 992) {
+
+        if (isOpen) {
+          document.body.classList.add('open-menu');
+        } else {
+          document.body.classList.remove('open-menu');
+        }
+      } else {
+        document.body.classList.remove('open-menu');
+        setIsOpen(false);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      document.body.classList.remove('open-menu');
+      window.removeEventListener('resize', handleResize);
     };
   }, [isOpen]);
 
   const handleMenuToggle = () => {
-    setIsOpen(prevState => !prevState);
+    if (window.innerWidth < 992) {
+      setIsOpen(prevState => !prevState);
+    }
   };
 
   const smoothScrollForTop = (event: React.MouseEvent<HTMLAnchorElement>) => {

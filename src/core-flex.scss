@@ -32,7 +32,7 @@
 
   @for $i from 2 through $grid_cols {
     .colflex-sm-#{$i} {
-      max-width: (100 / ($grid_cols / $i)) * 1%;
+      max-width: calc(100 / ($grid_cols / $i)) * 1%;
     }
   }
 
@@ -42,7 +42,7 @@
       padding: 0 15px;
 
       @media #{$sm} {
-        max-width: (100 / ($grid_cols / $i)) * 1%;
+        max-width: calc(100 / ($grid_cols / $i)) * 1%;
       }
 
       &.no-padd {

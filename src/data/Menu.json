@@ -1,0 +1,39 @@
+[
+  {
+    "scrollTarget": "#offer",
+    "iconName": "storefront",
+    "liItemName": "Oferta"
+  },
+  {
+    "scrollTarget": "#about_me",
+    "iconName": "accessibility_new",
+    "liItemName": "Poznaj mnie"
+  },
+  {
+    "scrollTarget": "#opinions",
+    "iconName": "reviews",
+    "liItemName": "Opinie"
+  },
+  {
+    "scrollTarget": "#faq",
+    "iconName": "quiz",
+    "liItemName": "FAQ"
+  },
+  {
+    "scrollTarget": "tel:+48535606164",
+    "iconName": "smartphone",
+    "liItemName": "Telefon",
+    "liClassName": "mobile-btn"
+  },
+  {
+    "scrollTarget": "mailto:biuro@sitenow.pl",
+    "iconName": "mail",
+    "liItemName": "Napisz do mnie",
+    "liClassName": "mobile-btn"
+  },
+  {
+    "scrollTarget": "#contact",
+    "iconName": "support_agent",
+    "liItemName": "Kontakt"
+  }
+]
