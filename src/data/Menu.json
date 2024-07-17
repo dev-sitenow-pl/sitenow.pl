@@ -10,6 +10,11 @@
     "liItemName": "Poznaj mnie"
   },
   {
+    "scrollTarget": "/portfolio",
+    "iconName": "smb_share",
+    "liItemName": "Realizacje"
+  },
+  {
     "scrollTarget": "#opinions",
     "iconName": "reviews",
     "liItemName": "Opinie"

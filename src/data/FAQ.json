@@ -37,7 +37,7 @@
   {
     "IDTab": "ID8",
     "question": "Czy masz prace/portfolio, którymi możesz się pochwalić?",
-    "answer": "Tak, moje aktualne portfolio możesz obejrzeć tutaj. <br>Grafiki wykorzystane do tej strony pochodzą z moich projektów, w których odpowiedzialny byłem za stronę frontendową."
+    "answer": "Tak, moje aktualne portfolio możesz obejrzeć <a href='/portfolio'>tutaj</a>. <br>Grafiki wykorzystane do tej strony pochodzą z moich projektów, w których odpowiedzialny byłem za stronę frontendową."
   },
   {
     "IDTab": "ID9",

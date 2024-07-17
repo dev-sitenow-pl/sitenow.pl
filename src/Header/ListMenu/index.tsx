@@ -11,25 +11,29 @@ type Props = {
 };
 
 const LiMenu = ({ element, handleMenuToggle }: Props) => {
-  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault();
-    handleMenuToggle();
+  const { scrollTarget, iconName, liItemName, liClassName } = element;
 
-    let target = document.querySelector(element.scrollTarget);
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+
+    if (scrollTarget.includes('#')) {
+      if (!liClassName) event.preventDefault();
+      handleMenuToggle();
+      let target = document.querySelector(scrollTarget);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
   return (
-    <li key={element.scrollTarget} className={element.liClassName}>
-      <a href={element.scrollTarget} onClick={handleClick}>
+    <li className={liClassName}>
+      <a href={scrollTarget} onClick={handleClick}>
         <span className="box-for-icon">
           <span className="material-symbols-outlined">
-            {element.iconName}
+            {iconName}
           </span>
         </span>
-        {element.liItemName}
+        {liItemName}
       </a>
     </li>
   );

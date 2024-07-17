@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 public
+build
+
+.htaccess
+
 
 # Editor directories and files
 .vscode/*

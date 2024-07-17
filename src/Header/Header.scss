@@ -27,6 +27,7 @@
       }
 
       &__svg-logo {
+        position: relative;
 
         a {
           @extend .box-flex;
@@ -54,6 +55,24 @@
           .brand__svg-logo-text-color {
 
             color: $yellow;
+          }
+        }
+
+        &__top-btn {
+          position: absolute;
+          top: 50%;
+          font-size: 2rem;
+          left: 0;
+          transform: translate(100%, -50%) scale(0);
+          transition: transform .4s;
+
+          @media #{$md} {
+            left: 50%;
+            transform: translate(-100%, -50%) scale(0);
+          }
+
+          @media #{$lg} {
+            left: 45%;
           }
         }
       }
@@ -311,6 +330,13 @@ header {
             max-height: 120px;
           }
 
+          &__top-btn {
+            transform: translate(-50%, -50%) scale(1);
+
+            @media #{$md} {
+              transform: translate(-50%, -50%) scale(1);
+            }
+          }
         }
 
         &__svg-logo-text {

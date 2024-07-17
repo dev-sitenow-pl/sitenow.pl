@@ -5,6 +5,7 @@ import { MenuBtnMobile } from '../MenuBtnMobile'
 import { Logo } from '../../Logo'
 
 import MenuItems from '../../data/Menu.json';
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,15 +51,20 @@ const Menu = () => {
   return <>
     <nav className="menu">
       <div className="brand__svg-logo">
-        <a href="#start" onClick={smoothScrollForTop}>
+        <Link to="/">
           <Logo />
+        </Link>
+        <a className="brand__svg-logo__top-btn" href="/#start" onClick={smoothScrollForTop}>
+          <span className="material-symbols-outlined">
+            keyboard_double_arrow_up
+          </span>
         </a>
       </div>
       <MenuBtnMobile handleMenuToggle={handleMenuToggle} />
       <div className='menu-box-list'>
         <ul className="ul">
-          {MenuItems.map(menuItem => (
-            <LiMenu element={menuItem} handleMenuToggle={handleMenuToggle} />
+          {MenuItems.map((menuItem, iconName) => (
+            <LiMenu key={iconName} element={menuItem} handleMenuToggle={handleMenuToggle} />
           ))}
         </ul>
       </div>

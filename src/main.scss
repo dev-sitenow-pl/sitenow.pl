@@ -244,3 +244,52 @@ br {
     border: 0;
   }
 }
+
+.policy-popup {
+  padding: .75em 0;
+  position: fixed;
+  z-index: 100;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $violet;
+  font-size: 75%;
+  opacity: .75;
+
+  transition: opacity .35s, bottom .35s;
+
+  @media #{$sm} {
+    bottom: -67px;
+  }
+
+  p {
+    text-align: center;
+    margin: 0 0 .5em;
+    color: $white;
+  }
+
+  a {
+    color: $yellow;
+  }
+
+  button {
+    padding: .25em .5em;
+    margin-top: .5em;
+    border: 0;
+    background: $green;
+    color: $white;
+    cursor: pointer;
+    transition: transform .35s ease-out;
+
+    &:hover {
+      transform: scale(.95);
+
+    }
+  }
+
+  &:hover {
+    bottom: 0;
+    opacity: 1;
+  }
+}

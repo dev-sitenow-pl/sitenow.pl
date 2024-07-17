@@ -12,7 +12,7 @@ const About = () => {
       </SectionTitle>
       <div className="flex-row">
         <div className="colflex-12">
-          <img className="rwd-img" src="images/sebastian.jpg" alt="" />
+          <img className="rwd-img" src="images/new/sebastian.webp" alt="" />
         </div>
       </div>
       <div className="flex-row">

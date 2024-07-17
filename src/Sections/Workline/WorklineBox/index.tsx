@@ -11,11 +11,13 @@ type Props = {
 }
 
 const WorklineBox = ({ worklineElement }: Props) => {
+  const { id, h3, paragraf } = worklineElement;
+
   return <div className="workline__box">
     <div className="workline__box-content">
-      <WorklineSVG id={worklineElement.id} />
-      <h3>{worklineElement.h3}</h3>
-      <p>{worklineElement.paragraf}
+      <WorklineSVG id={id} />
+      <h3>{h3}</h3>
+      <p>{paragraf}
       </p>
     </div>
   </div >

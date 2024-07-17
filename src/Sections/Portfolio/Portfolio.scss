@@ -1,0 +1,82 @@
+@import '../../core-flex';
+
+.portfolio {
+  &__boxes {
+    @extend .flex-row;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr;
+    gap: .5rem;
+    padding: 0 .75rem;
+
+    @media #{$xs} {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media #{$sm} {
+      grid-template-columns: repeat(3, 1fr);
+      padding: 0;
+    }
+
+    @media #{$md} {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__box {
+    // @extend .box-flex;
+    // @extend .jc-center;
+    // @extend .ai-center;
+    position: relative;
+    color: $yellow;
+    text-align: center;
+    border: 2px solid $yellow;
+    height: 10vw;
+    min-height: 100px;
+    overflow: hidden;
+
+    &__title,
+    &__btn-show,
+    a {
+      position: absolute;
+      width: 100%;
+      display: block;
+
+      transition: transform .4s, opacity .4s;
+    }
+
+
+    &__title {
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &__btn-show {
+      left: 50%;
+      bottom: 0;
+      width: calc(100% - 4px);
+      opacity: 0;
+      color: $white;
+      text-decoration: none;
+      background: $yellow;
+      transform: translate(-50%, 100%) scale(.95);
+    }
+
+    a {
+      height: 100%;
+      z-index: 3;
+    }
+
+    &:hover {
+      .portfolio__box__btn-show {
+        opacity: 1;
+        transform: translate(-50%, -2px) scale(1);
+      }
+
+      .portfolio__box__title {
+        transform: translateY(calc(-50% - 2rem));
+      }
+    }
+  }
+}

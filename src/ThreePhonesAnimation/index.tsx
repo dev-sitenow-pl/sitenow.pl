@@ -53,10 +53,10 @@ const ThreePhonesAnimation = () => {
       });
 
       gsap.to(insidePhone2.current, {
-        translateY: '-60%',
+        translateY: '-50%',
         duration: 25,
         delay: 3,
-        ease: 'Elastic.easeOut(.25)',
+        ease: "power1.out",
         repeat: -1,
         yoyo: true
       });
@@ -69,7 +69,7 @@ const ThreePhonesAnimation = () => {
           trigger: ".sec__1",
           start: '200px 200px',
           end: '+=800',
-          scrub: 1,
+          scrub: .8,
         }
       });
     }
@@ -79,23 +79,23 @@ const ThreePhonesAnimation = () => {
   return (
     <div className="phones-anim">
       <div className="phone-box" ref={phonesBody1}>
-        <img className="phone-body" src="images/phone.png" alt="" />
+        <img className="phone-body" src="images/new/phone.webp" alt="" />
         <div className="phone-box-visibility-area">
-          <img ref={insidePhone1} className="inside-phone" src="images/pokaz.png" alt="" />
+          <img ref={insidePhone1} className="inside-phone" src="images/new/lp-1.webp" alt="" />
         </div>
       </div>
 
       <div className="phone-box">
-        <img className="phone-body" src="images/phone.png" alt="" />
+        <img className="phone-body" src="images/new/phone.webp" alt="" />
         <div className="phone-box-visibility-area">
-          <img ref={insidePhone2} className="inside-phone" src="images/pokaz.png" alt="" />
+          <img ref={insidePhone2} className="inside-phone" src="images/new/lp-2.webp" alt="" />
         </div>
       </div>
 
       <div className="phone-box" ref={phonesBody2}>
-        <img className="phone-body" src="images/phone.png" alt="" />
+        <img className="phone-body" src="images/new/phone.webp" alt="" />
         <div className="phone-box-visibility-area">
-          <img ref={insidePhone3} className="inside-phone" src="images/pokaz.png" alt="" />
+          <img ref={insidePhone3} className="inside-phone" src="images/new/lp-3.webp" alt="" />
         </div>
       </div>
     </div>

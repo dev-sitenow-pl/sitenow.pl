@@ -1,0 +1,61 @@
+[
+  {
+    "category": "Landing Page",
+    "projects": [
+      {
+        "project_title": "Niezawodność Beko",
+        "project_url": "https://www.beko.com/pl-pl/niezawodnosc-beko"
+      },
+      {
+        "project_title": "Piekarniki Beyond",
+        "project_url": "https://www.beko.com/pl-pl/lp-piekarniki"
+      },
+      {
+        "project_title": "Pion czy poziom?",
+        "project_url": "https://www.beko.com/pl-pl/lp-pralki-suszarki"
+      },
+      {
+        "project_title": "Harvestfresh",
+        "project_url": "https://www.beko.com/pl-pl/harvestfresh-built-in"
+      },
+      {
+        "project_title": "ErgoClean",
+        "project_url": "https://www.beko.com/pl-pl/ergoclean"
+      }
+    ]
+  },
+  {
+    "category": "Wordpress",
+    "projects": [
+      {
+        "project_title": "BJK",
+        "project_url": "https://bjkholding.pl/"
+      },
+      {
+        "project_title": "Moja Jastarnia",
+        "project_url": "https://mojajastarnia.pl"
+      }
+    ]
+  },
+  {
+    "category": "Pełne portale",
+    "projects": [
+      {
+        "project_title": "Froneri gastro",
+        "project_url": "https://fronerigastro.pl/"
+      },
+      {
+        "project_title": "Promocje Beko",
+        "project_url": "https://programatorbeko.pl/"
+      },
+      {
+        "project_title": "Agencja reklamowa 4ALL",
+        "project_url": "https://4-all.pl/"
+      },
+      {
+        "project_title": "Bałtycka odsłona strony Beko",
+        "project_url": "https://beko.lt/lt"
+      }
+    ]
+  }
+]

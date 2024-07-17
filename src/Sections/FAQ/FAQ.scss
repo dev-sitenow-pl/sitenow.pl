@@ -35,6 +35,11 @@
 
       max-width: 80%;
     }
+
+    a {
+      display: contents;
+      color: $green;
+    }
   }
 
   &__box-text,
@@ -76,6 +81,7 @@
       @media #{$md} {
         justify-content: flex-end;
         text-align: right;
+        align-items: center;
       }
     }
 

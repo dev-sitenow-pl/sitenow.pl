@@ -6,7 +6,7 @@ const BannerLP = () => {
       <div className="flex-row box-flex ai-center jc-center">
         <div className="colflex-12">
           <div className="banner__body__monitor">
-            <img src="images/monitor.png" alt="" />
+            <img src="images/new/monitor.webp" alt="" />
             <div className="banner-box-txt">
 
               <h1>Koduję jakość na <span>Twojej stronie</span></h1>

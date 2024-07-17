@@ -34,3 +34,17 @@
     }
   }
 }
+
+.policy-box {
+  h5 {
+    margin: 3rem 0 1.38rem;
+
+    &:first-child {
+      margin: 0 0 1.38rem;
+    }
+  }
+
+  a {
+    color: $yellow;
+  }
+}
