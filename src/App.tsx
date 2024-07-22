@@ -10,6 +10,7 @@ import { Opinions } from "./Sections/Opinions";
 import { CookiePolicy } from "./views/policy/cookie";
 import { PrivacyPolicy } from "./views/policy/privacy";
 import { PolicyPopup } from "./views/policy/PolicyPopup";
+import { TawkTo } from "./chat/TawkTo";
 
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
       <Route path="/portfolio" element={<LicenseAnnotation />} />
     </Routes>
     <PolicyPopup />
+    <TawkTo />
   </>
 }
 
