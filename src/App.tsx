@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { Frontend } from "./views/lp/Frontend";
-import { PortfolioSite } from "./views/potrfolio/PortfolioSite";
+// import { PortfolioSite } from "./views/potrfolio/PortfolioSite";
 import { Header } from "./Header";
 import { Contact } from "./Contact";
 import { LicenseAnnotation } from "./LicenseAnnotation";
@@ -11,6 +11,7 @@ import { CookiePolicy } from "./views/policy/cookie";
 import { PrivacyPolicy } from "./views/policy/privacy";
 import { PolicyPopup } from "./views/policy/PolicyPopup";
 import { TawkTo } from "./chat/TawkTo";
+import { NotFound } from "./views/NotFound";
 
 
 const App = () => {
@@ -19,9 +20,10 @@ const App = () => {
     <Sections>
       <Routes>
         <Route path="/" element={<Frontend />} />
-        <Route path="/portfolio" element={<PortfolioSite />} />
+        {/* <Route path="/portfolio" element={<PortfolioSite />} /> */}
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/cookie-policy" element={<CookiePolicy />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Opinions />
       <FAQ />

@@ -25,9 +25,20 @@
           width: 100%;
           position: absolute;
           z-index: 1;
-          top: 40%;
+          top: 30%;
           left: 50%;
           transform: translate(-50%, -50%);
+        }
+
+        &__cta,
+        h3 {
+          margin: 1.38rem 0;
+        }
+
+        &__cta {
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
       }
 

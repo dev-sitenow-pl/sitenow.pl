@@ -5,14 +5,14 @@
     "liItemName": "Oferta"
   },
   {
+    "scrollTarget": "#portfolio",
+    "iconName": "smb_share",
+    "liItemName": "Realizacje"
+  },
+  {
     "scrollTarget": "#about_me",
     "iconName": "accessibility_new",
     "liItemName": "Poznaj mnie"
-  },
-  {
-    "scrollTarget": "/portfolio",
-    "iconName": "smb_share",
-    "liItemName": "Realizacje"
   },
   {
     "scrollTarget": "#opinions",

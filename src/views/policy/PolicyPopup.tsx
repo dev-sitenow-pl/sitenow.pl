@@ -31,7 +31,7 @@ const PolicyPopup = () => {
           Kontynuując korzystanie ze strony, zgadzasz się na ich użycie.
 
         </p>
-        <div className="box-flex ai-center jc-center">
+        <div className="box-flex row ai-center jc-center">
           <Link to="/privacy-policy" target="_blank" rel="noopener noreferrer">Polityka prywatności</Link> |
           <Link to="/cookie-policy" target="_blank" rel="noopener noreferrer">Polityka plików Cookies</Link>
 

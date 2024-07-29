@@ -3,6 +3,8 @@ import { SectionTitle } from '../Sections/SectionTitle'
 
 import './Contact.scss'
 import { Link } from 'react-router-dom'
+import { ContactForm } from './ContactForm'
+
 
 const Contact = () => {
   return <>
@@ -20,19 +22,20 @@ const Contact = () => {
         <rect width='800%' height='800%' transform='translate(-30,-47.82)' fill='url(#a)' />
       </svg>
       <SectionTitle>
-        <span>Skontaktuj</span> się ze mną
+        <span>Napisz</span> do mnie
       </SectionTitle>
       <div className="footer__contact no-form">
+
+        <ContactForm />
         <div className="box">
-          Wyślij e-maila na: <a href="mailto:biuro@sitenow.pl" title="Wyślij wiadomość do sitenow.pl">biuro@sitenow.pl</a>
+          E-mail: <a href="mailto:biuro@sitenow.pl" title="Wyślij wiadomość do sitenow.pl">biuro@sitenow.pl</a>
         </div>
-        <div className="box">lub</div>
         <div className="box">
-          Zadzwoń pod numer: <a href="tel:+48535606164">535 606 164</a>
+          Telefon: <a href="tel:+48535606164">535 606 164</a>
         </div>
       </div>
-
     </footer>
+
     <nav className='footer-nav'>
       <Link to="/privacy-policy">Polityka prywatności</Link>
       <Link to="/cookie-policy">Polityka plików Cookies</Link>

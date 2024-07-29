@@ -1,0 +1,27 @@
+@import '../variables';
+
+@keyframes loader_rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.loader-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+
+  .material-symbols-outlined {
+    font-size: 5em;
+
+    color: $violet;
+
+    animation: loader_rotate 4s infinite ease;
+  }
+}

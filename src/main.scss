@@ -191,20 +191,21 @@ br {
 
 .btn {
   display: block;
-  color: $white;
+  color: $violet;
   background: $yellow;
   padding: 0.75em 1.75em;
   border: 0;
   text-align: center;
   font-size: .8em;
+  font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;
   transform: scale(1, 1);
-  transition: transform .4s, background .4s, color .3s;
+  transition: transform .4s $transition-action, background .4s, color .3s;
   cursor: pointer;
 
   &:hover {
-    transform: scale(.9, .7);
+    transform: scale(.9);
   }
 
   +.btn {
@@ -212,6 +213,19 @@ br {
 
     @media #{$sm} {
       margin-top: 0;
+    }
+
+    &__cta {
+      text-transform: uppercase;
+      font-weight: 700;
+
+      &__mail {
+        color: $violet;
+      }
+
+      &__tele {
+        margin-top: 0;
+      }
     }
   }
 
@@ -223,6 +237,39 @@ br {
   &.violet {
     background: $violet;
     color: $yellow;
+  }
+
+  &.red {
+    background: $red;
+    color: $yellow;
+  }
+
+  &.green {
+    background: $green;
+    color: $white;
+  }
+
+  &__cta {
+    text-transform: uppercase;
+    font-weight: 700;
+
+
+    &__mail {
+      color: $violet;
+      border: 2px solid $yellow;
+    }
+
+    &__tele {
+      font-size: 65%;
+      margin-left: 2em;
+      color: $yellow;
+      background: transparent;
+
+
+      @media #{$sm} {
+        display: none;
+      }
+    }
   }
 }
 
@@ -271,6 +318,14 @@ br {
 
   a {
     color: $yellow;
+
+    &:nth-child(1) {
+      margin-right: .5em;
+    }
+
+    &:nth-child(2) {
+      margin-left: .5em;
+    }
   }
 
   button {

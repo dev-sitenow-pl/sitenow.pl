@@ -24,9 +24,15 @@ footer {
 
   .footer {
     &__contact {
+
       width: 100%;
-      max-width: calc($content-width / 2);
+      max-width: 500px;
       margin: 0 auto;
+
+      form {
+        position: relative;
+        margin-bottom: 2em;
+      }
 
       label {
         display: block;
@@ -37,6 +43,7 @@ footer {
         margin: .5em 0;
         padding: .75rem;
         width: 100%;
+        max-width: 100%;
         font-size: 1em;
         color: $violet;
         border: 2px solid transparent;
@@ -46,10 +53,15 @@ footer {
         font-weight: 500;
         border-radius: 0;
 
-        &:focus-visible {
+        &:focus-visible,
+        &.ready {
           border: 2px solid $violet;
           border-radius: 0;
           outline: 0;
+        }
+
+        &.ready {
+          border-color: $green;
         }
 
         &::placeholder {
@@ -58,7 +70,13 @@ footer {
         }
       }
 
-      button.btn {}
+      textarea {
+        min-height: 200px;
+      }
+
+      button.btn {
+        margin: 0 auto;
+      }
 
       &.no-form {
         display: grid;
@@ -95,6 +113,7 @@ footer {
   @extend .box-flex;
   @extend .ai-center;
   @extend .jc-center;
+  @extend .row;
 
   a {
     color: $yellow;
@@ -111,4 +130,45 @@ footer {
   padding: 1em;
   text-align: center;
   font-size: 60%;
+}
+
+.message-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba($yellow, .7);
+
+  h4 {
+    color: $violet;
+    text-align: center;
+    font-size: 2em;
+    margin: 0;
+  }
+
+  &.success,
+  &.error {
+    color: $white;
+
+    h4 {
+      color: $white;
+      font-size: 1.25em;
+    }
+  }
+
+  &.success {
+    background: rgba($green, .9);
+  }
+
+  &.error {
+    background: rgba($red, .9);
+  }
 }
